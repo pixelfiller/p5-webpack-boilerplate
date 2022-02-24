@@ -1,6 +1,6 @@
 import p5 from 'p5';
 
-const sketch =(p5) => {
+const sketch = (p5) => {
 
   const canvasWidth = p5.windowWidth;
   const canvasHeight = p5.windowHeight;
@@ -8,14 +8,14 @@ const sketch =(p5) => {
   window.p5 = p5;
 
   p5.setup = () => {
-    let canvas = p5.createCanvas(canvasWidth, canvasHeight);
-    canvas.parent('sketch');
     p5.background(0, 0, 0);
   }
 
   p5.draw = () => {
-    // drawing here
+    p5.circle(30, 30, 20);
   }
 }
+
+new p5(sketch);
 
 export default sketch;
